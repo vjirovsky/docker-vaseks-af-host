@@ -51,7 +51,7 @@ From Dockerfile you are able to pass on some parameters to your Function applica
 
 ### Sample project 
 
-You can find out sample project [here](https://github.com/vjirovsky/vaseks-af-host-sample).
+You can find out sample project [here](https://github.com/vjirovsky/docker-vaseks-af-host-sample).
 
 ### Result
 <img src="https://user-images.githubusercontent.com/2659294/49704046-e3b71100-fc0d-11e8-9c27-c738485f7308.png">
