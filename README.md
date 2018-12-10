@@ -55,3 +55,5 @@ You can find out sample project [here](https://github.com/vjirovsky/docker-vasek
 
 ### Result
 <img src="https://user-images.githubusercontent.com/2659294/49704046-e3b71100-fc0d-11e8-9c27-c738485f7308.png">
+<br /><br />
+<img src="https://user-images.githubusercontent.com/2659294/49737517-6632e580-fc8d-11e8-9f0c-81f3c11b3a46.png">
