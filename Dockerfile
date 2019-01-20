@@ -27,6 +27,8 @@ COPY ./run-vaseks-afhost.sh /azure-functions-host/run-vaseks-afhost.sh
 RUN sed -i 's/\r$//' /azure-functions-host/run-vaseks-afhost.sh  && \  
         chmod +x /azure-functions-host/run-vaseks-afhost.sh
 
+WORKDIR /home/site/wwwroot
+
 ENV AzureWebJobsScriptRoot=/home/site/wwwroot
 ENV AzureFunctionsJobHost__Logging__Console__IsEnabled=true
 ENV AzureWebJobsDashboard=""
