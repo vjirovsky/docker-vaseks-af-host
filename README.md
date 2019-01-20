@@ -1,6 +1,6 @@
 |Runtime|Version & status|
 |---|---|
-|dotnet| 2.0 OK |
+|dotnet| 2.2 OK |
 |python| --coming soon-- |
 |node| --coming soon-- |
 |powershell| --coming soon-- |
@@ -33,14 +33,14 @@ For runtime use ``` vjirovsky/vaseks-af-host:{runtimelanguage}-{version}```
 ### Minimum Dockerfile (dotnet):
 
 ```docker
-FROM microsoft/dotnet:2.1-sdk AS installer-env
+FROM microsoft/dotnet:2.2-sdk AS installer-env
 
 COPY src/ /src/
 RUN cd /src/SampleFunctionApp && \
     mkdir -p /home/site/wwwroot && \
     dotnet publish *.csproj -c "Release" --output /home/site/wwwroot
 
-FROM vjirovsky/vaseks-af-host:dotnet-2.0
+FROM vjirovsky/vaseks-af-host:dotnet-2.2
 
 ENV AzureWebJobsStorage="---YOUR-STORAGE_CONNECTION_STRING---"
 
