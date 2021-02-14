@@ -1,6 +1,6 @@
 ARG HOST_COMMIT=dev
 ARG BUILD_NUMBER=00001
-FROM microsoft/dotnet:2.2-sdk AS installer-env
+FROM mcr.microsoft.com/dotnet/sdk:3.1 AS installer-env
 ARG HOST_COMMIT
 ARG BUILD_NUMBER
 
@@ -20,7 +20,7 @@ RUN export ARG_BUILD_NUMBER=${BUILD_NUMBER} && \
     dotnet publish -v q /p:BuildNumber="$SCRIPT_BUILD_NUMBER" /p:CommitHash=${HOST_COMMIT} src/WebJobs.Script.WebHost/WebJobs.Script.WebHost.csproj --output /azure-functions-host
 
 # Runtime image
-FROM microsoft/dotnet:2.2-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/aspnet:3.1
 COPY --from=installer-env ["/azure-functions-host", "/azure-functions-host"]
 COPY ./run-vaseks-afhost.sh /azure-functions-host/run-vaseks-afhost.sh
 
